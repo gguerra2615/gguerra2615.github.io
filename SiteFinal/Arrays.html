@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays</title>
+  <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="Exs.css">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand nome">guilherme<span> guerra</span></a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+        aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+        <ul class="navbar-nav gap-2 py-3">
+          <li class="nav-item">
+            <a class="nav-link custom-link" href="Principal.html">sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-link" href="Programa.html">programa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-link" href="Exs.html">exercícios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-link" href="#">arrays</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-5">
+    <div class="card shadow-lg p-4">
+      <h1 class="text-center mb-4">Arrays</h1>
+      <div id="container">
+        <div id="menu" class="d-flex flex-column gap-2">
+          <button class="btn btn-outline-primary exercise-btn btn-escolher" onclick="mostrarFormulario(1)">Array:
+            Mostrar</button>
+          <button class="btn btn-outline-primary exercise-btn btn-escolher" onclick="mostrarFormulario(2)">Array:
+            push()</button>
+          <button class="btn btn-outline-primary exercise-btn btn-escolher" onclick="mostrarFormulario(3)">Array:
+            pop()</button>
+          <button class="btn btn-outline-primary exercise-btn btn-escolher" onclick="mostrarFormulario(4)">Array:
+            forEach()</button>
+          <button class="btn btn-outline-primary exercise-btn btn-escolher" onclick="mostrarFormulario(5)">Array:
+            filter()</button>
+        </div>
+
+        <div id="formularios">
+          <div class="formulario" id="form1">
+            <h4>Exemplo 1 - Criar e Mostrar um Array</h4>
+            <button class="btn btn-success" onclick="ex1()">Executar</button>
+            <p class="mt-2">Resultado: <span id="res1"></span></p>
+          </div>
+
+          <div class="formulario" id="form2">
+            <h4>Exemplo 2 - Adicionar item com push()</h4>
+            <button class="btn btn-success" onclick="ex2()">Executar</button>
+            <p class="mt-2">Resultado: <span id="res2"></span></p>
+          </div>
+
+          <div class="formulario" id="form3">
+            <h4>Exemplo 3 - Remover item com pop()</h4>
+            <button class="btn btn-success" onclick="ex3()">Executar</button>
+            <p class="mt-2">Resultado: <span id="res3"></span></p>
+          </div>
+
+          <div class="formulario" id="form4">
+            <h4>Exemplo 4 - Iterar com forEach()</h4>
+            <button class="btn btn-success" onclick="ex4()">Executar</button>
+            <p class="mt-2">Resultado: <span id="res4"></span></p>
+          </div>
+
+          <div class="formulario" id="form5">
+            <h4>Exemplo 5 - Filtrar com filter()</h4>
+            <button class="btn btn-success" onclick="ex5()">Executar</button>
+            <p class="mt-2">Resultado: <span id="res5"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function mostrarFormulario(num) {
+      document.querySelectorAll('.formulario').forEach(f => f.classList.remove('ativo'));
+      document.getElementById('form' + num).classList.add('ativo');
+    }
+
+    function ex1() {
+      const frutas = ["maçã", "banana", "laranja"];
+      const antes = frutas.slice();
+      document.getElementById("res1").textContent = `Antes: ${antes.join(", ")} | Depois: ${frutas.join(", ")}`;
+    }
+
+    function ex2() {
+      const numeros = [1, 2, 3];
+      const antes = numeros.slice();
+      numeros.push(4);
+      document.getElementById("res2").textContent = `Antes: ${antes.join(", ")} | Depois: ${numeros.join(", ")}`;
+    }
+
+    function ex3() {
+      const cores = ["vermelho", "azul", "verde"];
+      const antes = cores.slice();
+      cores.pop();
+      document.getElementById("res3").textContent = `Antes: ${antes.join(", ")} | Depois: ${cores.join(", ")}`;
+    }
+
+    function ex4() {
+      const animais = ["cão", "gato", "pássaro"];
+      const antes = animais.slice();
+      let texto = "";
+      animais.forEach(a => texto += a + " ");
+      document.getElementById("res4").textContent = `Antes: ${antes.join(", ")} | Depois (concatenação): ${texto.trim()}`;
+    }
+
+    function ex5() {
+      const idades = [12, 18, 25, 14, 30];
+      const antes = idades.slice();
+      const maiores = idades.filter(i => i >= 18);
+      document.getElementById("res5").textContent = `Antes: ${antes.join(", ")} | Depois (maiores de 18): ${maiores.join(", ")}`;
+    }
+  </script>
+  <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

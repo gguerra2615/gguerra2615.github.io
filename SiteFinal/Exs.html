@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="Exs.css">
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand nome">guilherme<span> guerra</span></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+                <ul class="navbar-nav gap-2 py-3">
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="Principal.html">sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="Programa.html">programa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="Exs.html">exercícios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="Arrays.html">arrays</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="card shadow-lg p-4">
+            <h1 class="text-center mb-4">Exercícios</h1>
+            <div id="container">
+                <div id="menu">
+                    <div class="dropdown">
+                        <button class="btn btn-escolher dropdown-toggle w-100" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Escolher Exercício
+                        </button>
+                        <ul class="dropdown-menu w-100">
+                            <li><a class="dropdown-item" href="#" onclick="mostrarFormulario(1)">Exercício 1</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="mostrarFormulario(2)">Exercício 2</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="mostrarFormulario(3)">Exercício 3</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="mostrarFormulario(4)">Exercício 4</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="mostrarFormulario(5)">Exercício 5</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="mostrarFormulario(6)">Exercício 6</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="mostrarFormulario(7)">Exercício 7</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="mostrarFormulario(8)">Exercício 8</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="mostrarFormulario(9)">Exercício 9</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="mostrarFormulario(10)">Exercício 10</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="mostrarFormulario(11)">Exercício 11</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="mostrarFormulario(12)">Exercício 12</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="mostrarFormulario(13)">Exercício 13</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="mostrarFormulario(14)">Exercício 14</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="mostrarFormulario(15)">Exercício 15</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="mostrarFormulario(16)">Exercício 16</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="mostrarFormulario(17)">Exercício 17</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="mostrarFormulario(18)">Exercício 18</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="mostrarFormulario(19)">Exercício 19</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="formularios">
+                <div class="formulario" id="form1">
+                    <h4>Exercício 1 - Dobro de um número</h4>
+                    <input type="text" id="num1" class="form-control mb-2" placeholder="Introduza um número">
+                    <button class="btn btn-success" onclick="dobro()">Executar</button>
+                    <p class="mt-2">Resultado: <span id="res1"></span></p>
+                </div>
+                <div class="formulario" id="form2">
+                    <h4>Exercício 2 - Paridade de um número</h4>
+                    <input type="text" id="num2" class="form-control mb-2" placeholder="Introduza um número">
+                    <button class="btn btn-success" onclick="paridade()">Executar</button>
+                    <p class="mt-2">Resultado: <span id="res2"></span></p>
+                </div>
+                <div class="formulario" id="form3">
+                    <h4>Exercício 3 - Soma dos n primeiros inteiros</h4>
+                    <input type="text" id="num3" class="form-control mb-2" placeholder="Introduza n">
+                    <button class="btn btn-success" onclick="somaN()">Executar</button>
+                    <p class="mt-2">Resultado: <span id="res3"></span></p>
+                </div>
+                <div class="formulario" id="form4">
+                    <h4>Exercício 4 - Soma de positivos até -1</h4>
+                    <input type="text" id="lista4" class="form-control mb-2" placeholder="Ex: 1,2,3,-1">
+                    <button class="btn btn-success" onclick="somaPositivos()">Executar</button>
+                    <p class="mt-2">Resultado: <span id="res4"></span></p>
+                </div>
+                <div class="formulario" id="form5">
+                    <h4>Exercício 5 - Inverter número (100-999)</h4>
+                    <input type="text" id="num5" class="form-control mb-2" placeholder="Introduza número">
+                    <button class="btn btn-success" onclick="inverter3Algarismos()">Executar</button>
+                    <p class="mt-2">Resultado: <span id="res5"></span></p>
+                </div>
+                <div class="formulario" id="form6">
+                    <h4>Exercício 6 - Inverter qualquer número</h4>
+                    <input type="text" id="num6" class="form-control mb-2" placeholder="Introduza número">
+                    <button class="btn btn-success" onclick="inverterNumero()">Executar</button>
+                    <p class="mt-2">Resultado: <span id="res6"></span></p>
+                </div>
+                <div class="formulario" id="form7">
+                    <h4>Exercício 7 - Dígito de controlo (número de 3 algarismos)</h4>
+                    <input type="text" id="num7" class="form-control mb-2" placeholder="Introduza número">
+                    <button class="btn btn-success" onclick="digitoControle()">Executar</button>
+                    <p class="mt-2">Resultado: <span id="res7"></span></p>
+                </div>
+                <div class="formulario" id="form8">
+                    <h4>Exercício 8 - Ordenar 3 números</h4>
+                    <input type="text" id="a8" class="form-control mb-2" placeholder="a">
+                    <input type="text" id="b8" class="form-control mb-2" placeholder="b">
+                    <input type="text" id="c8" class="form-control mb-2" placeholder="c">
+                    <button class="btn btn-success" onclick="ordenarTres()">Executar</button>
+                    <p class="mt-2">Resultado: <span id="res8"></span></p>
+                </div>
+                <div class="formulario" id="form9">
+                    <h4>Exercício 9 - Salário líquido</h4>
+                    <input type="text" id="sal9" class="form-control mb-2" placeholder="Salário bruto">
+                    <button class="btn btn-success" onclick="salarioLiquido()">Executar</button>
+                    <p class="mt-2">Resultado: <span id="res9"></span></p>
+                </div>
+                <div class="formulario" id="form10">
+                    <h4>Exercício 10 - Decimal para binário</h4>
+                    <input type="text" id="num10" class="form-control mb-2" placeholder="Decimal">
+                    <button class="btn btn-success" onclick="decimalParaBinario()">Executar</button>
+                    <p class="mt-2">Resultado: <span id="res10"></span></p>
+                </div>
+                <div class="formulario" id="form11">
+                    <h4>Exercício 11 - Soma, média, max, min</h4>
+                    <input type="text" id="lista11" class="form-control mb-2" placeholder="Ex: 3,7,2,5">
+                    <button class="btn btn-success" onclick="estatisticas()">Executar</button>
+                    <p class="mt-2">Resultado: <span id="res11"></span></p>
+                </div>
+                <div class="formulario" id="form12">
+                    <h4>Exercício 12 - Verificar capicua</h4>
+                    <input type="text" id="num12" class="form-control mb-2" placeholder="Introduza número">
+                    <button class="btn btn-success" onclick="verificarCapicua()">Executar</button>
+                    <p class="mt-2">Resultado: <span id="res12"></span></p>
+                </div>
+                <div class="formulario" id="form13">
+                    <h4>Exercício 13 - Fatorial (iterativo)</h4>
+                    <input type="text" id="num13" class="form-control mb-2" placeholder="Introduza número">
+                    <button class="btn btn-success" onclick="fatorial()">Executar</button>
+                    <p class="mt-2">Resultado: <span id="res13"></span></p>
+                </div>
+                <div class="formulario" id="form14">
+                    <h4>Exercício 14 - Fatorial (recursivo)</h4>
+                    <input type="text" id="num14" class="form-control mb-2" placeholder="Introduza número">
+                    <button class="btn btn-success" onclick="fatorialRec()">Executar</button>
+                    <p class="mt-2">Resultado: <span id="res14"></span></p>
+                </div>
+                <div class="formulario" id="form15">
+                    <h4>Exercício 15 - Potência (base^expoente)</h4>
+                    <input type="text" id="base15" class="form-control mb-2" placeholder="Base">
+                    <input type="text" id="exp15" class="form-control mb-2" placeholder="Expoente">
+                    <button class="btn btn-success" onclick="potencia()">Executar</button>
+                    <p class="mt-2">Resultado: <span id="res15"></span></p>
+                </div>
+                <div class="formulario" id="form16">
+                    <h4>Exercício 16 - Máximo divisor comum</h4>
+                    <input type="text" id="a16" class="form-control mb-2" placeholder="Número 1">
+                    <input type="text" id="b16" class="form-control mb-2" placeholder="Número 2">
+                    <button class="btn btn-success" onclick="mdc()">Executar</button>
+                    <p class="mt-2">Resultado: <span id="res16"></span></p>
+                </div>
+                <div class="formulario" id="form17">
+                    <h4>Exercício 17 - Máquina de selos (3€ e 5€)</h4>
+                    <input type="text" id="valor17" class="form-control mb-2" placeholder="Total a devolver">
+                    <button class="btn btn-success" onclick="maquinaSelos()">Executar</button>
+                    <p class="mt-2">Resultado: <span id="res17"></span></p>
+                </div>
+                <div class="formulario" id="form18">
+                    <h4>Exercício 18 - Número primo</h4>
+                    <input type="text" id="num18" class="form-control mb-2" placeholder="Introduza número">
+                    <button class="btn btn-success" onclick="verificarPrimo()">Executar</button>
+                    <p class="mt-2">Resultado: <span id="res18"></span></p>
+                </div>
+                <div class="formulario" id="form19">
+                    <h4>Exercício 19 - Listar N primos</h4>
+                    <input type="text" id="n19" class="form-control mb-2" placeholder="Quantos primos?">
+                    <button class="btn btn-success" onclick="listarPrimos()">Executar</button>
+                    <p class="mt-2">Resultado: <span id="res19"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function mostrarFormulario(num) {
+            document.querySelectorAll('.formulario').forEach(f => f.classList.remove('ativo'));
+            document.getElementById('form' + num).classList.add('ativo');
+        }
+
+        function dobro() {
+            let n = parseFloat(document.getElementById("num1").value);
+            document.getElementById("res1").textContent = isNaN(n) ? "Entrada inválida" : n * 2;
+        }
+
+        function paridade() {
+            let n = parseInt(document.getElementById("num2").value);
+            document.getElementById("res2").textContent = isNaN(n) ? "Entrada inválida" : (n % 2 === 0 ? "Par" : "Ímpar");
+        }
+
+        function somaN() {
+            let n = parseInt(document.getElementById("num3").value);
+            let soma = 0;
+            for (let i = 1; i <= n; i++) soma += i;
+            document.getElementById("res3").textContent = isNaN(n) ? "Entrada inválida" : soma;
+        }
+
+        function somaPositivos() {
+            let valores = document.getElementById("lista4").value.split(',').map(Number);
+            let soma = 0;
+            for (let v of valores) if (v >= 0) soma += v;
+            document.getElementById("res4").textContent = soma;
+        }
+
+        function inverter3Algarismos() {
+            let n = parseInt(document.getElementById("num5").value);
+            if (n < 100 || n > 999) {
+                document.getElementById("res5").textContent = "Erro";
+                return;
+            }
+            let u = n % 10, d = Math.floor(n / 10) % 10, c = Math.floor(n / 100);
+            document.getElementById("res5").textContent = u * 100 + d * 10 + c;
+        }
+
+        function inverterNumero() {
+            let n = parseInt(document.getElementById("num6").value);
+            let r = 0, original = n;
+            while (n > 0) {
+                r = r * 10 + (n % 10);
+                n = Math.floor(n / 10);
+            }
+            document.getElementById("res6").textContent = r;
+        }
+
+        function digitoControle() {
+            let n = parseInt(document.getElementById("num7").value);
+            if (n < 100 || n > 999) {
+                document.getElementById("res7").textContent = "Erro";
+                return;
+            }
+            let u = n % 10, d = Math.floor(n / 10) % 10, c = Math.floor(n / 100);
+            let dc = (u * 5 + d * 3 + c) % 7;
+            document.getElementById("res7").textContent = n * 10 + dc;
+        }
+
+        function ordenarTres() {
+            let a = parseFloat(document.getElementById("a8").value);
+            let b = parseFloat(document.getElementById("b8").value);
+            let c = parseFloat(document.getElementById("c8").value);
+            let arr = [a, b, c].sort((x, y) => x - y);
+            document.getElementById("res8").textContent = arr.join(', ');
+        }
+
+        function salarioLiquido() {
+            let sb = parseFloat(document.getElementById("sal9").value);
+            let tx = sb < 0 ? 0 : sb < 1000 ? 0.10 : sb < 1500 ? 0.15 : sb < 2000 ? 0.20 : 0.30;
+            document.getElementById("res9").textContent = (sb * (1 - tx)).toFixed(2);
+        }
+
+        function decimalParaBinario() {
+            let dec = parseInt(document.getElementById("num10").value);
+            document.getElementById("res10").textContent = isNaN(dec) ? "Entrada inválida" : dec.toString(2);
+        }
+
+        function estatisticas() {
+            let nums = document.getElementById("lista11").value.split(',').map(Number);
+            if (nums.length === 0) return;
+            let soma = nums.reduce((a, b) => a + b, 0);
+            let max = Math.max(...nums);
+            let min = Math.min(...nums);
+            let media = soma / nums.length;
+            document.getElementById("res11").textContent = `Soma: ${soma}, Média: ${media.toFixed(2)}, Mínimo: ${min}, Máximo: ${max}`;
+        }
+
+        function verificarCapicua() {
+            let num = document.getElementById("num12").value;
+            let rev = num.split('').reverse().join('');
+            document.getElementById("res12").textContent = (num === rev) ? "Capicua" : "Não é capicua";
+        }
+
+        function fatorial() {
+            let n = parseInt(document.getElementById("num13").value);
+            let fat = 1;
+            for (let i = 2; i <= n; i++) fat *= i;
+            document.getElementById("res13").textContent = fat;
+        }
+
+        function fatorialRec() {
+            function fat(n) { return n <= 1 ? 1 : n * fat(n - 1); }
+            let n = parseInt(document.getElementById("num14").value);
+            document.getElementById("res14").textContent = fat(n);
+        }
+
+        function potencia() {
+            let base = parseFloat(document.getElementById("base15").value);
+            let exp = parseInt(document.getElementById("exp15").value);
+            document.getElementById("res15").textContent = Math.pow(base, exp);
+        }
+
+        function mdc() {
+            let a = parseInt(document.getElementById("a16").value);
+            let b = parseInt(document.getElementById("b16").value);
+            while (b != 0) {
+                let temp = b;
+                b = a % b;
+                a = temp;
+            }
+            document.getElementById("res16").textContent = a;
+        }
+
+        function maquinaSelos() {
+            let valor = parseInt(document.getElementById("valor17").value);
+            let s5 = 0, s3 = 0;
+            while (valor >= 5) valor -= 5, s5++;
+            while (valor >= 3) valor -= 3, s3++;
+            if (valor === 0)
+                document.getElementById("res17").textContent = `Selos de 5€: ${s5}, Selos de 3€: ${s3}`;
+            else
+                document.getElementById("res17").textContent = "Não é possível devolver com selos de 3€ e 5€";
+        }
+
+        function verificarPrimo() {
+            let n = parseInt(document.getElementById("num18").value);
+            if (n < 2) return document.getElementById("res18").textContent = "Não é primo";
+            for (let i = 2; i <= Math.sqrt(n); i++) if (n % i === 0)
+                return document.getElementById("res18").textContent = "Não é primo";
+            document.getElementById("res18").textContent = "É primo";
+        }
+
+        function listarPrimos() {
+            let qtd = parseInt(document.getElementById("n19").value);
+            let primos = [], num = 2;
+            while (primos.length < qtd) {
+                let primo = true;
+                for (let i = 2; i <= Math.sqrt(num); i++) if (num % i === 0) { primo = false; break; }
+                if (primo) primos.push(num);
+                num++;
+            }
+            document.getElementById("res19").textContent = primos.join(', ');
+        }
+    </script>
+    <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
